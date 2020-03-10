@@ -8,7 +8,9 @@
 
     git clone hhttps://github.com/thestrangemonster/P3_gretten_thomas.git
     cd P3_gretten_thomas
-
+    virtualenv env -p python3
+    python env/bin/activate
+    deactivate => quit virtualenv
   
 
 ## Lauch the game
@@ -24,6 +26,8 @@ Use arrow keys to move MacGyver
 You must take the 3 items before going to the guardian and exit
 
 Enjoy of the game ....
+
+
 
 
 
