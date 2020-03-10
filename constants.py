@@ -5,45 +5,44 @@
 constants.py
 """
 #Paramètres de la fenêtre
-height_of_sprite = 40
-nb_of_sprite = 15
-height = height_of_sprite * nb_of_sprite
+HEIGHT_OF_SPRITE = 40
+NB_OF_SPRITE = 15
+HEIGHT = HEIGHT_OF_SPRITE * NB_OF_SPRITE
 
 ##MAZE##
-picture_wall = "pictures/wall.png"
-picture_empty = "pictures/empty.png"
-picture_macgiver = "pictures/mc_f.png"
-picture_macgiver_back = "pictures/mc_b.png"
-picture_macgiver_left = "pictures/mc_l.png"
-picture_macgiver_right = "pictures/mc_r.png"
-picture_guardian = "pictures/guardian1.png"
-picture_items = "pictures/items.png"
-picture_syringe = "pictures/syringe1.png"
-picture_needle = "pictures/needle1.png"
-picture_tube = "pictures/tube1.png"
-picture_bag = "pictures/bag.png"
-picture_bag2 = "pictures/bag2.png"
+PICTURE_WALL = "pictures/wall.png"
+PICTURE_EMPTY = "pictures/empty.png"
+PICTURE_MACGYVER = "pictures/mc_f.png"
+PICTURE_MACGYVER_BACK = "pictures/mc_b.png"
+PICTURE_MACGYVER_LEFT = "pictures/mc_l.png"
+PICTURE_MACGYVER_RIGHT = "pictures/mc_r.png"
+PICTURE_GUARDIAN = "pictures/guardian1.png"
+PICTURE_SYRINGE = "pictures/syringe1.png"
+PICTURE_NEEDLE = "pictures/needle1.png"
+PICTURE_TUBE = "pictures/tube1.png"
+PICTURE_BAG = "pictures/bag.png"
+PICTURE_BAG2 = "pictures/bag2.png"
 
-right = 1
-left = -1
-up = -15
-down = 15
+RIGHT = 1
+LEFT = -1
+UP = -15
+DOWN = 15
 
 ##MENU##
-soundtrack = "sound/macgyver_theme.mp3"
-mac = "pictures/mac.png"
-gyver = "pictures/gyver.png"
-logo = "pictures/logo.png"
-macgyver_menu = "pictures/macgyver_menu.png"
-get_into_the_game = "pictures/get_into_the_game.png"
-chevron_left = "pictures/chevron_left.png"
-chevron_right = "pictures/chevron_right.png"
-enter = "pictures/enter.png"
-enter_small = "pictures/enter_small.png"
-exit = "pictures/exit.png"
-exit_small = "pictures/exit_small.png"
-info_menu = "pictures/info_menu.png"
-continue_big = "pictures/continue.png"
-continue_small = "pictures/continue_small.png"
-you_won = "pictures/you_won.png"
-you_lost = "pictures/you_lost.png"
+SOUNDTRACK = "sound/macgyver_theme.mp3"
+MAC = "pictures/mac.png"
+GYVER = "pictures/gyver.png"
+LOGO = "pictures/logo.png"
+MACGYVER_MENU = "pictures/macgyver_menu.png"
+GET_INTO_THE_GAME = "pictures/get_into_the_game.png"
+CHEVRON_LEFT = "pictures/chevron_left.png"
+CHEVRON_RIGHT = "pictures/chevron_right.png"
+ENTER = "pictures/enter.png"
+ENTER_SMALL = "pictures/enter_small.png"
+EXIT = "pictures/exit.png"
+EXIT_SMALL = "pictures/exit_small.png"
+INFO_MENU = "pictures/info_menu.png"
+CONTINUE_BIG = "pictures/continue.png"
+CONTINUE_SMALL = "pictures/continue_small.png"
+YOU_WON = "pictures/you_won.png"
+YOU_LOST = "pictures/you_lost.png"

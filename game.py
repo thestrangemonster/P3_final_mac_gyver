@@ -3,13 +3,14 @@ from pygame.locals import *
 from constants import *
 from maze import Maze
 
-
 class Game:
 
     def __init__(self):
         pygame.init()
-        # Création de la fenêtre avec une taille variable en fonction de la taille que je dèsire donner aux sprites
-        self.window = pygame.display.set_mode((height, height+40))
+        # Création de la fenêtre avec une taille variable en fonction de la 
+        # taille que je dèsire donner aux sprites
+        self.window = pygame.display.set_mode(
+            (HEIGHT, HEIGHT+HEIGHT_OF_SPRITE))
         # nomer la fenêtre
         pygame.display.set_caption('MAZE')
 
@@ -23,7 +24,6 @@ class Game:
         self.background.fill((0, 0, 0))
         
         # création du labyrinthe
-
         # instance de la classe Maze avec mon fichier path à initialiser
         self.maze = Maze(self.path)
         # générer le labyrinthe
@@ -33,12 +33,12 @@ class Game:
         # création de mac giver
         self.macgiver = self.maze.get_mc_pos()
 
-        self.positon_picture = picture_macgiver
+        self.positon_picture = PICTURE_MACGYVER
         self.pos_item = self.maze.get_item_pos()
         self.continued = 1
         self.nb = 0
-        self.x = (self.macgiver % nb_of_sprite) * height_of_sprite
-        self.y = (self.macgiver // nb_of_sprite) * height_of_sprite
+        self.x = (self.macgiver % NB_OF_SPRITE) * HEIGHT_OF_SPRITE
+        self.y = (self.macgiver // NB_OF_SPRITE) * HEIGHT_OF_SPRITE
         self.items = []
         self.result = None
         self.exit = True
@@ -73,17 +73,17 @@ class Game:
         if event.type == KEYDOWN:
             #Touches de déplacement de macgyver
             if event.key == K_RIGHT:
-                self.positon_picture = picture_macgiver_right
-                self.move(right)
+                self.positon_picture = PICTURE_MACGYVER_RIGHT
+                self.move(RIGHT)
             elif event.key == K_LEFT:
-                self.positon_picture = picture_macgiver_left
-                self.move(left)
+                self.positon_picture = PICTURE_MACGYVER_LEFT
+                self.move(LEFT)
             elif event.key == K_UP:
-                self.positon_picture = picture_macgiver_back
-                self.move(up)
+                self.positon_picture = PICTURE_MACGYVER_BACK
+                self.move(UP)
             elif event.key == K_DOWN:
-                self.positon_picture = picture_macgiver
-                self.move(down)
+                self.positon_picture = PICTURE_MACGYVER
+                self.move(DOWN)
         #Si l'utilisateur quitte, on met la variable qui continue le jeu
         #ET la variable générale à 0 pour fermer la fenêtre
         if event.type == QUIT:
@@ -96,13 +96,13 @@ class Game:
 
     # méthode de déplacement de macgyver, prend en compte le ramassage des items
     def move(self, shift):
-        if self.macgiver % 15 == 0 and shift == left:
+        if self.macgiver % 15 == 0 and shift == LEFT:
             return
-        if (self.macgiver+1) % 15 == 0 and shift == right:
+        if (self.macgiver+1) % 15 == 0 and shift == RIGHT:
             return
-        if self.macgiver < 15 and shift == up:
+        if self.macgiver < 15 and shift == UP:
             return
-        if self.macgiver > 209 and shift == down:
+        if self.macgiver > 209 and shift == DOWN:
             return
         if self.maze.data[self.macgiver+shift] == "W":
             return
@@ -114,9 +114,9 @@ class Game:
             self.fight_guardian()
         if self.maze.data[self.macgiver+shift] in ("E", "M"):
             self.x = ((self.macgiver+shift) %
-                      nb_of_sprite) * height_of_sprite
+                      NB_OF_SPRITE) * HEIGHT_OF_SPRITE
             self.y = ((self.macgiver+shift) //
-                      nb_of_sprite) * height_of_sprite
+                      NB_OF_SPRITE) * HEIGHT_OF_SPRITE
             self.macgiver += shift
 
 
@@ -142,7 +142,8 @@ class Game:
         #Initialisation de la bibliothèque Pygame
         pygame.init()
         # Création de la fenêtre avec une taille variable en fonction de la taille que je dèsire donner aux sprites
-        self.window = pygame.display.set_mode((height, height+40))
+        self.window = pygame.display.set_mode(
+            (HEIGHT, HEIGHT+HEIGHT_OF_SPRITE))
         # nomer la fenêtre
         pygame.display.set_caption('MAZE')
 
@@ -165,11 +166,11 @@ class Game:
         # création de mac giver
         # instance de class macgyver parent ou enfant l'instance de la class Maze (héritage)
         self.macgiver = self.maze.get_mc_pos()
-        self.positon_picture = picture_macgiver
+        self.positon_picture = PICTURE_MACGYVER
         self.pos_item = self.maze.get_item_pos()
         self.continued = 1
         self.nb = 0
-        self.x = (self.macgiver % nb_of_sprite) * height_of_sprite
-        self.y = (self.macgiver // nb_of_sprite) * height_of_sprite
+        self.x = (self.macgiver % NB_OF_SPRITE) * HEIGHT_OF_SPRITE
+        self.y = (self.macgiver // NB_OF_SPRITE) * HEIGHT_OF_SPRITE
         self.items = []
         self.result = None

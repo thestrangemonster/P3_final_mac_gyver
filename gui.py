@@ -18,27 +18,27 @@ class Gui:
         self.choice_gui_message = 0
 
                 ##PICTURES OF GUI MENU##
-        self.mac = pygame.image.load(mac).convert_alpha()
-        self.gyver = pygame.image.load(gyver).convert_alpha()
-        self.logo = pygame.image.load(logo).convert_alpha()
-        self.macgyver = pygame.image.load(macgyver_menu).convert_alpha()
+        self.mac = pygame.image.load(MAC).convert_alpha()
+        self.gyver = pygame.image.load(GYVER).convert_alpha()
+        self.logo = pygame.image.load(LOGO).convert_alpha()
+        self.macgyver = pygame.image.load(MACGYVER_MENU).convert_alpha()
         self.select_get_into_the_game = pygame.image.load(
-            get_into_the_game).convert_alpha()
+            GET_INTO_THE_GAME).convert_alpha()
         self.chevron_select_left = pygame.image.load(
-            chevron_left).convert_alpha()
+            CHEVRON_LEFT).convert_alpha()
         self.chevron_select_right = pygame.image.load(
-            chevron_right).convert_alpha()
-        self.enter = pygame.image.load(enter).convert_alpha()
-        self.enter_small = pygame.image.load(enter_small).convert_alpha()
-        self.exit = pygame.image.load(exit).convert_alpha()
-        self.exit_small = pygame.image.load(exit_small).convert_alpha()
-        self.info_menu = pygame.image.load(info_menu).convert_alpha()
+            CHEVRON_RIGHT).convert_alpha()
+        self.enter = pygame.image.load(ENTER).convert_alpha()
+        self.enter_small = pygame.image.load(ENTER_SMALL).convert_alpha()
+        self.exit = pygame.image.load(EXIT).convert_alpha()
+        self.exit_small = pygame.image.load(EXIT_SMALL).convert_alpha()
+        self.info_menu = pygame.image.load(INFO_MENU).convert_alpha()
 
                 ##PICTURES OF GUI MESSAGE##
-        self.you_won_img = pygame.image.load(you_won).convert_alpha()
-        self.you_lost_img = pygame.image.load(you_lost).convert_alpha()
-        self.continue_big = pygame.image.load(continue_big).convert_alpha()
-        self.continue_small = pygame.image.load(continue_small).convert_alpha()
+        self.you_won_img = pygame.image.load(YOU_WON).convert_alpha()
+        self.you_lost_img = pygame.image.load(YOU_LOST).convert_alpha()
+        self.continue_big = pygame.image.load(CONTINUE_BIG).convert_alpha()
+        self.continue_small = pygame.image.load(CONTINUE_SMALL).convert_alpha()
         
 
                 ##SIZE OF GUI MENU##
@@ -63,7 +63,7 @@ class Gui:
 
      
     def run_gui_menu(self):
-        pygame.mixer.music.load(soundtrack)
+        pygame.mixer.music.load(SOUNDTRACK)
         pygame.mixer.music.play()
         while self.loop_gui_menu:
             if self.size_banner_mac[0] != 160:
